@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+Making gcodes for cnc machine
 
-You can use the [editor on GitHub](https://github.com/arjunhari2704/CNC-MACHINE/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+STEP 1: Go to fabmodules.org
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+STEP 2: Click on image (.png) and select your schematic file
 
-### Markdown
+STEP 3: Click on Output format and select ShopBot (.sbp)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+STEP 4: Click on Process and select Foam rough cut
 
-```markdown
-Syntax highlighted code block
+STEP 5: Select mm in File Units and input the required data values
 
-# Header 1
-## Header 2
-### Header 3
+STEP 6: Click on Calculate and save the file
 
-- Bulleted
-- List
+Break
 
-1. Numbered
-2. List
+Milling using ShopBot
 
-**Bold** and _Italic_ and `Code` text
+STEP 1: Select the ‘Program Run’ tab in Mach3
 
-[Link](url) and ![Image](src)
-```
+STEP 2: Plug your USB Drive into the Mach3 PC and use ‘File->Load GCode’ within Mach3 to load your file.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+STEP 3: Use the arrow keys to jog the spindle to what will be the lower right corner of your etching. Leave some extra room to avoid disasters.
 
-### Jekyll Themes
+STEP 4: Click ‘Zero X’, ‘Zero Y’ and ‘Zero Z’ on the Mach3 Screen
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/arjunhari2704/CNC-MACHINE/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+STEP 5: Click ‘Cycle Start’ on the Mach3 Screen
 
-### Support or Contact
+STEP 6: When prompted, jog the spindle down to within 5mm of the board and click ‘Cycle Start’ again.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+STEP 7: The CNC will begin probing the work piece. If at any point Guido seems to be plunging the bit into the copper, hit the red E-Stop button and check your connections.
+
+STEP 8: If you need to fix a connection and restart the process, be sure to use the ‘Rewind’ button in Mach3 before clicking ‘Cycle Start’ again.
